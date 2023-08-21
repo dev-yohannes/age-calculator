@@ -18,13 +18,25 @@
         <br />
         <div class="name-div">
           <label for="name">Name:</label>
-          <input type="text" name="name" id="name-input" autocomplete="off" />
+          <input
+            type="text"
+            name="name"
+            id="name-input"
+            autocomplete="off"
+            required
+          />
         </div>
         <div class="year-div">
           <label for="year">Year:</label>
-          <input type="number" name="year" id="year-input" autocomplete="off" />
+          <input
+            type="number"
+            name="year"
+            id="year-input"
+            autocomplete="off"
+            required
+          />
         </div>
-        <div class="month-div">
+        <!-- <div class="month-div">
           <label for="month">Month:</label>
           <input
             type="number"
@@ -36,13 +48,16 @@
         <div class="day-div">
           <label for="day">Day:</label>
           <input type="number" name="day" id="day-input" autocomplete="off" />
-        </div>
+        </div> -->
         <button class="calculate-age-button" id="calculate-age-button">
           Calculate Age
         </button>
         <p class="result" id="result"></p>
       </div>
     </div>
+
+    <!--  -->
+    <input type="date" />
     <!--  -->
     <script src="script.js"></script>
     <!--  -->
