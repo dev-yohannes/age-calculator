@@ -5,14 +5,21 @@ let dayInput = document.querySelector("#day-input");
 let calculateButton = document.querySelector("#calculate-age-button");
 let finalResult = document.querySelector("#result");
 
-function calculating() {
-  result = 2023 - yearInput.value;
+function calculatingYear() {
+  calculatedYearResult = 2023 - yearInput.value;
+  return calculatedYearResult;
+}
+
+function capitalizingFirstLetter() {
+  let strign = nameInput.value;
+  let result = strign.charAt(0).toUpperCase() + strign.slice(1);
+
   return result;
 }
 
 function displayingWithName() {
-  string = `Hello ${nameInput.value}. You are ${calculating()} years old.`;
-  return string;
+  popUpText = `Hello ${capitalizingFirstLetter()}. You are ${calculatingYear()} years old.`;
+  return popUpText;
 }
 
 calculateButton.addEventListener("click", function () {
