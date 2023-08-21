@@ -1,14 +1,19 @@
 let nameInput = document.querySelector("#name-input");
 let yearInput = document.querySelector("#year-input");
-// let monthInput = document.querySelector("#month-input");
-// let dayInput = document.querySelector("#day-input");
+let monthInput = document.querySelector("#month-input");
+let dayInput = document.querySelector("#day-input");
 let calculateButton = document.querySelector("#calculate-age-button");
 let finalResult = document.querySelector("#result");
 
 // ------------
-// let date = new Date();
-// let yr = date.getFullYear();
-// let month = date.getMonth();
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth();
+let dayOfWeek = date.getDate();
+
+console.log(year);
+console.log(month);
+console.log(dayOfWeek);
 
 // yearInput.value =
 //   date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
@@ -22,8 +27,18 @@ let finalResult = document.querySelector("#result");
 
 // old one
 function calculatingYear() {
-  calculatedYearResult = 2023 - yearInput.value;
+  calculatedYearResult = year - yearInput.value;
   return calculatedYearResult;
+}
+
+function calculatingMonth() {
+  calculatedMonthResult = month - monthInput.value;
+  return calculatedMonthResult;
+}
+
+function calculatingDay() {
+  calculatedDayResult = dayOfWeek - dayInput.value;
+  return calculatedDayResult;
 }
 
 function capitalizingFirstLetter() {
@@ -34,7 +49,8 @@ function capitalizingFirstLetter() {
 }
 
 function displayingWithName() {
-  popUpText = `Hello ${capitalizingFirstLetter()}. You are ${calculatingYear()} years old.`;
+  // popUpText = `Hello ${capitalizingFirstLetter()}. You are ${calculatingYear()} years ${calculatingMonth()} month ${calculatingDay()} days old.`;
+  popUpText = `Hello ${capitalizingFirstLetter()}, You are ${calculatingYear()} years old.`;
   return popUpText;
 }
 
