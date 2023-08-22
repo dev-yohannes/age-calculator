@@ -1,4 +1,5 @@
 let nameInput = document.querySelector("#name-input");
+let dateInput = document.querySelector("#date-input");
 let yearInput = document.querySelector("#year-input");
 let monthInput = document.querySelector("#month-input");
 let dayInput = document.querySelector("#day-input");
@@ -6,30 +7,12 @@ let calculateButton = document.querySelector("#calculate-age-button");
 let finalResult = document.querySelector("#result");
 
 // ------------
-let date = new Date();
-let year = date.getFullYear();
-let month = date.getMonth();
-let dayOfWeek = date.getDate();
-
-console.log(year);
-console.log(month);
-console.log(dayOfWeek);
-
-// yearInput.value =
-//   date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
-
-// //
-// yearInput.addEventListener("keyup", (e) => {
-//   const [year, month, day] = e.target.value.split("-");
-
-//   console.log({ year, month, day });
-// });
 
 // old one
-function calculatingYear() {
-  calculatedYearResult = year - yearInput.value;
-  return calculatedYearResult;
-}
+// function calculatingYear() {
+//   calculatedYearResult = year - yearInput.value;
+//   return calculatedYearResult;
+// }
 
 function calculatingMonth() {
   calculatedMonthResult = month - monthInput.value;
@@ -48,15 +31,36 @@ function capitalizingFirstLetter() {
   return result;
 }
 
-function displayingWithName() {
-  // popUpText = `Hello ${capitalizingFirstLetter()}. You are ${calculatingYear()} years ${calculatingMonth()} month ${calculatingDay()} days old.`;
-  popUpText = `Hello ${capitalizingFirstLetter()}, You are ${calculatingYear()} years old.`;
-  return popUpText;
-}
+// function displayingWithName() {
+//   // popUpText = `Hello ${capitalizingFirstLetter()}. You are ${calculatingYear()} years ${calculatingMonth()} month ${calculatingDay()} days old.`;
+//   popUpText = `Hello ${capitalizingFirstLetter()}, You are ${calculatingYear()} years old.`;
+//   return popUpText;
+// }
+
+// function calculatingYearInputs() {
+//   date = new Date(yearInput.value);
+//   let year = date.getFullYear();
+//   let month = date.getMonth();
+//   let dayOfMonth = date.getDate();
+
+//   //
+//   console.log(year);
+//   console.log(month);
+// }
 
 calculateButton.addEventListener("click", function () {
-  finalResult.innerHTML = displayingWithName();
-  console.log(yearInput.value);
+  // finalResult.innerHTML = displayingWithName();
+  // console.log(yearInput.value);
+
+  //
+  // calculatingYearInputs();
+  date = new Date(dateInput.value);
+  let year = date.getFullYear();
+  let month = date.getMonth();
+
+  //
+  console.log(year);
+  console.log(month);
 });
 
 document.addEventListener("keypress", function (e) {
