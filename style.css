@@ -46,6 +46,11 @@
   width: 50px;
 }
 
+#name-input {
+  padding: 3px;
+  padding-left: 3px;
+}
+
 .container .calculate-age-button {
   margin: 10px 0px;
   padding: 5px 20px;
