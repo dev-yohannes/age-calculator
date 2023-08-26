@@ -38,8 +38,6 @@ function capitalizingFirstLetter() {
   return result;
 }
 
-// const finalGreetingText = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText}`;
-
 function calculatingYearInputs() {
   date = new Date();
   userDate = new Date(dateInput.value);
