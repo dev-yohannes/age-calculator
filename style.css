@@ -6,11 +6,10 @@
 }
 
 .parent {
-  /* border: 1px solid red; */
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: last center;
+  align-items: center;
 }
 
 .container {
@@ -22,6 +21,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.container h1 {
+  text-align: center;
 }
 
 .home-img {
@@ -64,6 +67,8 @@
 
 .result {
   margin: 5px 0px;
+  padding: 0px 15px;
+  /* text-align: center; */
 }
 
 @media screen and (max-width: 400px) {
