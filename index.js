@@ -45,9 +45,14 @@ function calculatingYearInputs() {
   let userMonth = userDate.getMonth();
   let userDayOfMonth = userDate.getDate();
 
+  let calculating = date.getFullYear() - userDate.getFullYear();
+
   function calculatingAge() {
-    let calculating = date.getFullYear() - userDate.getFullYear();
-    return calculating;
+    if (userMonth < date.getMonth()) {
+      return calculating;
+    } else {
+      return calculating - 1;
+    }
   }
 
   if (
