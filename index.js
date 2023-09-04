@@ -1,7 +1,7 @@
-let nameInput = document.querySelector("#name-input");
-let dateInput = document.querySelector("#date-input");
-let calculateButton = document.querySelector("#calculate-age-button");
-let finalResult = document.querySelector("#result");
+const nameInput = document.querySelector("#name-input");
+const dateInput = document.querySelector("#date-input");
+const calculateButton = document.querySelector("#calculate-age-button");
+const finalResult = document.querySelector("#result");
 
 const aquarius = "Aquarius";
 const pieses = "Pieses";
@@ -32,8 +32,8 @@ const dec = 11;
 const finalText = "And your Zodiac sign is";
 
 function capitalizingFirstLetter() {
-  let strign = nameInput.value;
-  let result = strign.charAt(0).toUpperCase() + strign.slice(1);
+  const strign = nameInput.value;
+  const result = strign.charAt(0).toUpperCase() + strign.slice(1);
 
   return result;
 }
@@ -41,11 +41,11 @@ function capitalizingFirstLetter() {
 function calculatingYearInputs() {
   date = new Date();
   userDate = new Date(dateInput.value);
-  let userYear = userDate.getFullYear();
-  let userMonth = userDate.getMonth();
-  let userDayOfMonth = userDate.getDate();
+  const userYear = userDate.getFullYear();
+  const userMonth = userDate.getMonth();
+  const userDayOfMonth = userDate.getDate();
 
-  let calculating = date.getFullYear() - userDate.getFullYear();
+  const calculating = date.getFullYear() - userDate.getFullYear();
 
   function calculatingAge() {
     if (userMonth < date.getMonth()) {
