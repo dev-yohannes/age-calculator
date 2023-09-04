@@ -10,12 +10,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgb(235, 255, 254);
 }
 
 .container {
   /* border: 1px solid blue; */
-  background-color: #f8f7f3;
-  box-shadow: 3px 3px 30px 1px #888888;
+  /* background-color: #f8f7f3; */
+  background-color: whitesmoke;
+  box-shadow: 3px 3px 30px 1px #4b4b4b;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -51,7 +53,7 @@
 
 #name-input {
   padding: 3px;
-  padding-left: 3px;
+  padding-left: 5px;
 }
 
 .container .calculate-age-button {
