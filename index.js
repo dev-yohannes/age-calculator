@@ -3,19 +3,6 @@ const dateInput = document.querySelector("#date-input");
 const calculateButton = document.querySelector("#calculate-age-button");
 const finalResult = document.querySelector("#result");
 
-const aquarius = "Aquarius";
-const pieses = "Pieses";
-const aries = "Aries";
-const taurus = "Taurus";
-const gemini = "Gemini";
-const cancer = "Cancer";
-const leo = "Leo";
-const virgo = "Virgo";
-const libra = "Libra";
-const scorpio = "Scorpio";
-const sagittarius = "Sagittarius";
-const capricorn = "Capricorn";
-
 const jan = 0;
 const feb = 1;
 const mar = 2;
@@ -48,74 +35,78 @@ function calculatingYearInputs() {
   const calculating = date.getFullYear() - userDate.getFullYear();
 
   function calculatingAge() {
-    if (userMonth < date.getMonth()) {
-      return calculating;
-    } else {
+    if (userMonth > date.getMonth()) {
       return calculating - 1;
+    } else {
+      return calculating;
     }
   }
+
+  zodiac = "";
 
   if (
     (userMonth === jan && userDayOfMonth > 20) ||
     (userMonth === feb && userDayOfMonth < 18)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${aquarius}`;
+    zodiac = "Aquarius";
   } else if (
     (userMonth === feb && userDayOfMonth > 19) ||
     (userMonth === mar && userDayOfMonth < 20)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${pieses}`;
+    zodiac = "Pieses";
   } else if (
     (userMonth === mar && userDayOfMonth > 21) ||
     (userMonth === apr && userDayOfMonth < 19)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${aries}`;
+    zodiac = "Aries";
   } else if (
     (userMonth === apr && userDayOfMonth > 20) ||
     (userMonth === may && userDayOfMonth < 20)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${taurus}`;
+    zodiac = "Taurus";
   } else if (
     (userMonth === may && userDayOfMonth > 21) ||
     (userMonth === jun && userDayOfMonth < 20)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${gemini}`;
+    zodiac = "Gemini";
   } else if (
     (userMonth === jun && userDayOfMonth > 21) ||
     (userMonth === jul && userDayOfMonth < 22)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${cancer}`;
+    zodiac = "Cancer";
   } else if (
     (userMonth === jul && userDayOfMonth > 23) ||
     (userMonth === aug && userDayOfMonth < 22)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${leo}`;
+    zodiac = "Leo";
   } else if (
     (userMonth === aug && userDayOfMonth > 23) ||
     (userMonth === sep && userDayOfMonth < 22)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${virgo}`;
+    zodiac = "Virgo";
   } else if (
     (userMonth === sep && userDayOfMonth > 23) ||
     (userMonth === oct && userDayOfMonth < 22)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${libra}`;
+    zodiac = "Libra";
   } else if (
     (userMonth === oct && userDayOfMonth > 23) ||
     (userMonth === nov && userDayOfMonth < 21)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${scorpio}`;
+    zodiac = "Scorpio";
   } else if (
     (userMonth === nov && userDayOfMonth > 22) ||
     (userMonth === dec && userDayOfMonth < 21)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${sagittarius}`;
+    zodiac = "Sagittarius";
   } else if (
     (userMonth === dec && userDayOfMonth > 22) ||
     (userMonth === jan && userDayOfMonth < 19)
   ) {
-    finalResult.innerHTML = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${capricorn}`;
+    zodiac = "Capricorn";
   }
+
+  finalResult.innerText = `Hello ${capitalizingFirstLetter()}, You are ${calculatingAge()} years old. ${finalText} ${zodiac}`;
 }
 
 calculateButton.addEventListener("click", function () {
